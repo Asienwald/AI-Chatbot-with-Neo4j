@@ -1,34 +1,76 @@
 {
   "intents": [
     {
-      "tag": "inquire_cca_general",
-      "patterns": ["are cca compulsory", "how many cca can you join", "how to apply for a cca", "how to create a cca", "benefits of cca"],
-      "responses": ["Inquiring about CCA general info..."],
-      "context": [""]
+      "tag": "cca_compulsory",
+      "patterns": ["are cca compulsory", "do i need to join a cca", "can I not join a club", "do i have to join a cca"],
+      "context": "cca"
     },
     {
-      "tag": "inquire_cca_list",
-      "patterns": ["what cca are there", "what cca do you have"],
-      "responses": ["Gathering CCA list..."],
-      "context": [""]
+      "tag": "cca_application",
+      "patterns": ["how do i apply for a cca", "how to join cca", "register for a cca"],
+      "context": "cca"
     },
     {
-      "tag": "inquire_cca_grades",
-      "patterns": ["what are cca points", "how are cca points awarded", "what cca components are there", "what is each component", "how does grading work", "how are points consolidated"],
-      "responses": ["Inquiring CCA Awards and Grading System..."],
-      "context": [""]
+      "tag": "cca_quit",
+      "patterns": ["quit cca", "leave my club or cca", "retire from my cca"],
+      "context": "cca"
     },
     {
-      "tag": "inquire_cca_sfl",
-      "patterns": ["what is sports for life", "sfl", "what is sfl pass criteria", "how to register for sfl", "what are the modules in sfl", "what sports in sfl", "what day is sfl on", "sfl schedule", "where is sfl", "sfl venues", "can i change my sfl date"],
-      "responses": ["Inquiring about Sports for Life..."],
-      "context": [""]
+      "tag": "cca_creation",
+      "patterns": ["how to create cca", "make new cca", "start a cca", "register for a new cca or club"],
+      "context": "cca"
     },
     {
-      "tag": "inquire_cca_facilities",
-      "patterns": ["what sports facilities in sp", "sports facilities", "courts", "sports venues"],
-      "responses": ["Inquiring sport facilities..."],
-      "context": [""]
+      "tag": "cca_benefits",
+      "patterns": ["benefits of cca", "why do i need to join a cca", "is cca important"],
+      "context": "cca"
+    },
+    {
+      "tag": "cca_list",
+      "patterns": ["what ccas are there", "what cca do you have", "do you have a specific cca or club", "what ccas", "what clubs"],
+      "context": "cca"
+    },
+    {
+      "tag": "cca_points_about",
+      "patterns": ["what are cca points", "what is the grading system for", "what are cca grades", "what is gold, silver or bronze"],
+      "context": "cca"
+    },
+    {
+      "tag": "cca_points_how",
+      "patterns": ["how are points awarded", "how will i get my cca grades", "how do i redeem my cca points",
+                   "how does grading work", "how are points consolidated"],
+      "context": "cca"
+    },
+    {
+      "tag": "cca_components",
+      "patterns": ["what cca components are there", "what kind of points", "different types of cca points", "tell me more about each component"],
+      "context": "cca"
+    },
+    {
+      "tag": "sfl_what",
+      "patterns": ["what is sports for life", "sfl", "tell me more about sfl", "what is sfl pass criteria", "how does sfl work"],
+      "context": "cca"
+    },
+    {
+      "tag": "sfl_register",
+      "patterns": ["how to register for sfl", "sign up for sfl sports for life", "join sports for life sfl"],
+      "context": "cca"
+    },
+    {
+      "tag": "sfl_modules",
+      "patterns": ["what are the modules in sfl", "what sports in sports for life sfl", "list of activities in sfl"],
+      "context": "cca"
+    },
+    {
+      "tag": "sfl_schedule",
+      "patterns": ["what day is sfl on", "sfl schedule", "where is sfl", "sfl venues"],
+      "context": "cca"
+    },
+    {
+      "tag": "cca_facilities",
+      "patterns": ["what sports facilities in sp", "sports facilities", "courts", "sports venues", "badminton courts", "tennis courts",
+                   "basketball court", "football field"],
+      "context": "cca"
     }
   ]
 }
