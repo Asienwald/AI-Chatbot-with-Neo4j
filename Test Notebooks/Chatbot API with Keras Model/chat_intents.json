@@ -1,0 +1,34 @@
+{
+  "intents": [
+    {
+      "tag": "inquire_cca_general",
+      "patterns": ["are cca compulsory", "how many cca can you join", "how to apply for a cca", "how to create a cca", "benefits of cca"],
+      "responses": ["Inquiring about CCA general info..."],
+      "context": [""]
+    },
+    {
+      "tag": "inquire_cca_list",
+      "patterns": ["what cca are there", "what cca do you have"],
+      "responses": ["Gathering CCA list..."],
+      "context": [""]
+    },
+    {
+      "tag": "inquire_cca_grades",
+      "patterns": ["what are cca points", "how are cca points awarded", "what cca components are there", "what is each component", "how does grading work", "how are points consolidated"],
+      "responses": ["Inquiring CCA Awards and Grading System..."],
+      "context": [""]
+    },
+    {
+      "tag": "inquire_cca_sfl",
+      "patterns": ["what is sports for life", "sfl", "what is sfl pass criteria", "how to register for sfl", "what are the modules in sfl", "what sports in sfl", "what day is sfl on", "sfl schedule", "where is sfl", "sfl venues", "can i change my sfl date"],
+      "responses": ["Inquiring about Sports for Life..."],
+      "context": [""]
+    },
+    {
+      "tag": "inquire_cca_facilities",
+      "patterns": ["what sports facilities in sp", "sports facilities", "courts", "sports venues"],
+      "responses": ["Inquiring sport facilities..."],
+      "context": [""]
+    }
+  ]
+}
