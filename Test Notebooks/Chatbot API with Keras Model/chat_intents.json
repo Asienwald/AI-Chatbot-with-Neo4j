@@ -2,12 +2,12 @@
   "intents": [
     {
       "tag": "cca_compulsory",
-      "patterns": ["are cca compulsory", "do i need to join a cca", "can I not join a club", "do i have to join a cca"],
+      "patterns": ["are cca compulsory", "need to join a cca", "not join a club", "have to join a cca", "necessary to join a cca"],
       "context": "cca"
     },
     {
       "tag": "cca_application",
-      "patterns": ["how do i apply for a cca", "how to join cca", "register for a cca"],
+      "patterns": ["how to apply for a cca", "how to join cca", "register for a cca", "how to enter a club"],
       "context": "cca"
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "tag": "cca_benefits",
-      "patterns": ["benefits of cca", "why do i need to join a cca", "is cca important"],
+      "patterns": ["benefits of cca", "why do i need to join a cca", "is cca important", "why join a club"],
       "context": "cca"
     },
     {
