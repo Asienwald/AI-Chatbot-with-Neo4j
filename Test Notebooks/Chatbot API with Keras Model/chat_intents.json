@@ -1,6 +1,63 @@
 {
   "intents": [
     {
+      "tag": "course_what",
+      "patterns": ["what courses", "courses are there", "what courses are there", "what course"],
+      "context": "course"
+    },
+    {
+        "tag": "course_cutoff",
+        "patterns": ["what is the course cut off", "course cut off", "cut off", "cut off points", "course cut off points"],
+        "context": "course"
+    },
+    {
+        "tag": "course_environment",
+        "patterns": ["What is the school environment like", "school environment", "environment", 
+                    "study environment"],
+        "context": "course"
+    },
+    {
+        "tag": "course_class",
+        "patterns": ["class size", "how big is a class", "how big class", "how many students in a class",
+                    "students in class"],
+        "context": "course"
+    },
+    {
+        "tag": "course_appeal",
+        "patterns": ["how do i appeal for another course", "appeal", "another course", "how to appeal", 
+                    "appeal another course","appeal course"],
+        "context": "course"
+    },
+    {
+        "tag": "course_moreThan1",
+        "patterns": ["can you take more than 1 course", "more than 1 course", "more than one course",
+                    "multiple courses"],
+        "context": "course"
+    },
+    {
+        "tag": "course_modules",
+        "patterns": ["modules", "modules for course", "what are the modules", "modules for", "course modules"],
+        "context": "course"
+    },
+    {
+        "tag": "course_scholarships",
+        "patterns": ["scholarships", "what scholarships", "scholarships are there", "what scholarhips are there",
+                    "scholarships criteria", "scholarship bonds", "bonds", "scholarships apply",
+                    "apply scholarships", "scholarship application", "part time student scholarship",
+                    "can part time student get scholarship"],
+        "context": "course"
+    },
+    {
+        "tag": "course_contact",
+        "patterns": ["helpdesk", "contact", "helpdesk contact", "nuumber to call", "inquiries", "school inquiries"],
+        "context": "course"
+    },
+    {
+        "tag": "course_attendance",
+        "patterns": [""],
+        "context": "course"
+    },
+    {
       "tag": "cca_compulsory",
       "patterns": ["are cca compulsory", "need to join a cca", "not join a club", "have to join a cca", "necessary to join a cca"],
       "context": "cca"
