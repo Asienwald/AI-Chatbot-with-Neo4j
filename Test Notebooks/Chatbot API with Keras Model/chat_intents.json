@@ -1,65 +1,88 @@
 {
   "intents": [
     {
-      "tag" : "general_history",
-      "patterns" : ["when was sp made","sp established","when establish","when sp established"] ,
-      "context" : "general"
+        "tag": "misc_greetings",
+        "patterns": ["hello", "hi", "good day", "good morning afternoon night"],
+        "context": "misc"
+    },
+    {
+        "tag": "misc_bye",
+        "patterns": ["thank you", "goodbye", "bye", "thanks for your help"],
+        "context": "misc"
+    },
+    {
+        "tag": "misc_name",
+        "patterns": ["what is your name", "do you have a name", "who are you"],
+        "context": "misc"
+    },
+    {
+        "tag" : "general_history",
+        "patterns" : ["when was sp made","sp established","when establish","when sp established", "how old is sp"],
+        "context" : "general"
     },
     {
         "tag" : "general_fc",
-        "patterns" : ["what food places","what food courts","food","food price","food affordable","wide range of food","variety of food"],
+        "patterns" : ["what food places","what food courts","food","food price","food affordable","wide range of food","variety of food",
+                      "what foodcourts you have", "foodcourt"],
         "context" : "general"
     },
     {
         "tag" : "general_internships",
-        "patterns" : ["when are internships","when intern","when internship","how long internship","internship how long","internship long"],
+        "patterns" : ["when are internships","when intern","when internship","how long internship","internship long"],
         "context" : "general"
     },
     {
-      "tag": "course_what",
-      "patterns": ["what courses", "courses are there", "what courses are there", "what course"],
-      "context": "course"
+        "tag": "general_schools",
+        "patterns": ["what schools do we have", "different types of schools"],
+        "context": "general"
+    },
+    {
+        "tag": "course_what",
+        "patterns": ["what courses", "courses are there", "what courses are there", "what course"],
+        "context": "course"
     },
     {
         "tag": "course_cutoff",
-        "patterns": ["what is the course cut off", "course cut off", "cut off", "cut off points", "course cut off points"],
+        "patterns": ["what is the course cut off", "course cut off", "cut off", "cut off points", "course cut off points",
+                     "course requirements"],
         "context": "course"
     },
     {
         "tag": "course_environment",
         "patterns": ["What is the school environment like", "school environment", "environment", 
-                    "study environment"],
+                     "study environment"],
         "context": "course"
     },
     {
         "tag": "course_class",
         "patterns": ["class size", "how big is a class", "how big class", "how many students in a class",
-                    "students in class"],
+                    "students in class", "size of a cohort"],
         "context": "course"
     },
     {
         "tag": "course_appeal",
-        "patterns": ["how do i appeal for another course", "appeal", "another course", "how to appeal", 
-                    "appeal another course","appeal course"],
+        "patterns": ["how do i appeal for another course", "appeal", "how to appeal for my course", 
+                    "appeal another course", "change my course", "switch courses"],
         "context": "course"
     },
     {
         "tag": "course_moreThan1",
-        "patterns": ["can you take more than 1 course", "more than 1 course", "more than one course",
-                    "multiple courses"],
+        "patterns": ["can you take more than 1 course", "can I take many courses", "more than one course",
+                    "multiple courses", "apply for a minor course", "get a secondary course", "second or third course"],
         "context": "course"
     },
     {
         "tag": "course_modules",
-        "patterns": ["modules", "modules for course", "what are the modules", "modules for", "course modules"],
+        "patterns": ["modules", "modules for course", "what are the modules", "modules for", "course modules",
+                     "what will I learn in my course", "course curriculum"],
         "context": "course"
     },
     {
         "tag": "course_scholarships",
         "patterns": ["scholarships", "what scholarships", "scholarships are there", "what scholarhips are there",
-                    "scholarships criteria", "scholarship bonds", "bonds", "scholarships apply",
-                    "apply scholarships", "scholarship application", "part time student scholarship",
-                    "can part time student get scholarship"],
+                     "scholarships criteria", "scholarship bonds", "bonds", "scholarships apply",
+                     "apply scholarships", "scholarship application", "part time student scholarship",
+                     "can part time student get scholarship"],
         "context": "course"
     },
     {
@@ -68,8 +91,13 @@
         "context": "course"
     },
     {
-        "tag": "course_attendance",
-        "patterns": ["ats","ATS","loa","LOA","how to apply for loa","what is ats","how to loa","loa how","how loa","what ats"],
+        "tag": "course_ats",
+        "patterns": ["ats", "attendance taking system", "what is ats", "how do we take attendance", "how does ats work"],
+        "context": "course"
+    },
+    {
+        "tag": "course_loa",
+        "patterns": ["loa","how to apply for loa","how to loa", "leave of absence", "get loa"],
         "context": "course"
     },
     {
@@ -99,7 +127,8 @@
     },
     {
         "tag": "cca_list",
-        "patterns": ["what ccas are there", "what cca do you have", "do you have a specific cca or club", "what ccas", "what clubs"],
+        "patterns": ["what ccas are there", "what cca do you have", "do you have a specific cca or club", "what ccas", "what clubs",
+                     "how many ccas are there"],
         "context": "cca"
     },
     {
@@ -143,6 +172,11 @@
         "patterns": ["what sports facilities in sp", "sports facilities", "courts", "sports venues", "badminton courts", "tennis courts",
                     "basketball court", "football field"],
         "context": "cca"
+    },
+    {
+        "tag": "unknown",
+        "patterns": [""],
+        "context": ""
     }
   ]
 }

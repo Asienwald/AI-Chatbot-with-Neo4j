@@ -1,0 +1,16 @@
+cca = dict(
+    cca_compulsory = "No. Having a club is not compulsory, though it is encouraged that you join one to enrich your poly life! You can join as many clubs as you want!",
+    cca_application = "Through the club application form or simply contact the specific club through email.\n There will be a CCA carnival every year for students to join CCAs.",
+    cca_quit = "Students will have to inform their club commitee and update their CCA status on the student portal.",
+    cca_creation = "You will need to submit a club application form and go through a series of presentations for the club to be approved.\nFor more information together with the club application form, click this link:\nhttps://life.sp.edu.sg/wp-content/uploads/2018/07/SA-FRM-023A-New-Club-Formation-Application-Form-Rel-1.1.pdf",
+    cca_benefits = "Clubs are a great way to enrich a student’s life, providing opportunities to learn things not thought in their respective curriculum.",
+    cca_list = "There are 6 main categories of clubs. You can view them all in this link.\nhttps://life.sp.edu.sg/cca/academic-school-clubs/",
+    cca_points_about = "CCA points cumulative over the 3 years of a student’s education in SP will be converted into a grade that is reflected in the student’s final-year’s CCA statement.\nYou can view this under SP Student Portal > eServices > CCA > View CCA Records",
+    cca_points_how = "CCA points will be awarded only to CCAs that are organised or endorsed by SP.\nCCA points for external CCAs will only be given to official National representation or SP-related activities approved or endoresed by SA.\nCCA points are not awarded to activities that form part of a formal course curriculum.\n\nCCA points are to be submitted within 1 month of the completion of the activity to the staff in-charge.\nThe CCA records will then be updated into the SAS system.\nThe secretary of the club will usually be the one responsible for making these requests on behalf of the students.",
+    cca_components = "There are 7 main CCA components. You can find out more about each component here.\nhttps://life.sp.edu.sg/wp-content/uploads/2017/05/SP-CCA-Points-Awarding-and-Grading-System-Summary-Apr-2017.pdf",
+    sfl_what = "Sports for Life (SFL) is a physical education programme with up to 18 modules (for Year 1) and 11 modules (Year 2 & 3) to choose from. It has recently become part of the Graduation Criteria for ALL Year 1 students matriculated from AY2018/19 onwards.\n75% attendance and a passing grade in their respective module’s skills assessment in Week 9 & 10",
+    sfl_register = "Please follow the steps in this guide here to register.\nhttps://life.sp.edu.sg/active/sports-for-life/how-to-register/\n\nStudents will have to also submit an indemnity form on their 1st lesson to participate.\nhttps://life.sp.edu.sg/wp-content/uploads/2019/03/SA-FRM-026E-SA-Indemnity-Form-Rel-2.1-SFL-Year-1-3.pdf",
+    sfl_modules = "The full list of SFL modules can be found here.\nhttps://life.sp.edu.sg/active/sports-for-life/type-of-modules/",
+    sfl_schedule = "Schedules and venues can be found here.\nhttps://life.sp.edu.sg/active/sports-for-life/schedules-venues/",
+    cca_facilities = "You can find the sports facilities we have here.\nhttps://www.sp.edu.sg/sp/about-sp/facilities"
+)
