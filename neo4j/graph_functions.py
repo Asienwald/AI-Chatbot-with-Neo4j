@@ -1,4 +1,4 @@
-from py2neo import Graph
+from py2neo import Graph, Node
 graph = Graph("bolt://localhost:7687", auth = ("neo4j", 
                                        "ILikeYuri"))
 from PIL import Image
@@ -35,4 +35,8 @@ def CreateNewNode(label: str, params: ParamDict):
 def CreateNewRelation(rel_label: str, node_a: str, node_b: str):
     graph.run(f"MATCH (a:n {ParamDict(name=node_a)})")
     graph.run(f"MATCH (b:n {ParamDict(name=node_b)})")
-    graph.run(f"RETURN CREATE (a)-[rel:{rel_label}]-(b)")
+    graph.run(f"CREATE (a)-[rel:{rel_label}]-(b)")
+
+#####################
+# Real API Use here #
+#####################
