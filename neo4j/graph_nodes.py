@@ -39,7 +39,8 @@ building_nodes = dict(
     t20 = Node("building", name = "T20", description = "blue", school = "SoC"),
     t21 = Node("building", name = "T21", description = "blue", school = "SoC"),
     t22 = Node("building", name = "T22", description = "blue", school = "SoC"),
-    sob = Node("building", name = "SoB", description = "blue")
+    sob = Node("building", name = "SoB", description = "blue"),
+    parking = Node("building", name = "Parking lot", description = "test")
 )
 
 facilities_nodes = dict(
@@ -85,21 +86,30 @@ food_nodes = dict(
     libcafe = Node("food", name = "Library Cafe", description = "orange")
 )
 
-parking_lot_nodes = dict(
-    a1 = Node("parking lot", name = "A-1", description = "this parking lots has 20 lots"),
-    a2 = Node("parking lot", name = "A-2", description = ""),
-    a3 = Node("parking lot", name = "A-3", description = ""),
-    b1 = Node("parking lot", name = "B-1", description = ""),
-    b2 = Node("parking lot", name = "B-2", description = ""),
-    b3 = Node("parking lot", name = "B-3", description = ""),
-    c1 = Node("parking lot", name = "C-1", description = ""),
-    c2 = Node("parking lot", name = "C-2", description = ""),
-    d1 = Node("parking lot", name = "D-1", description = ""),
-    d2 = Node("parking lot", name = "D-2", description = ""),
-    d3 = Node("parking lot", name = "D-3", description = "")
+lot_nodes = dict(
+    a1 = Node("lots", name = "A-1", description = "this is lot number one"),
+    a2 = Node("lots", name = "A-2", description = ""),
+    a3 = Node("lots", name = "A-3", description = ""),
+    a4 = Node("lots", name = "A-4", description = ""),
+    a5 = Node("lots", name = "A-5", description = ""),
+    a6 = Node("lots", name = "A-6", description = ""),
+    a7 = Node("lots", name = "A-7", description = ""),
+    a8 = Node("lots", name = "A-8", description = ""),
+    a9 = Node("lots", name = "A-9", description = ""),
+    a10 = Node("lots", name = "A-10", description = ""),
+    a11 = Node("lots", name = "A-11", description = ""),
+    a12 = Node("lots", name = "A-12", description = ""),
+    a13 = Node("lots", name = "A-13", description = ""),
+    a14 = Node("lots", name = "A-14", description = ""),
+    a15 = Node("lots", name = "A-15", description = ""),
+    a16 = Node("lots", name = "A-16", description = ""),
+    a17 = Node("lots", name = "A-17", description = ""),
+    a18 = Node("lots", name = "A-18", description = ""),
+    a19 = Node("lots", name = "A-19", description = ""),
+    a20 = Node("lots", name = "A-20", description = "")
 )
 
-graph_nodes= [building_nodes, facilities_nodes, food_nodes, parking_lot_nodes]
+graph_nodes= [building_nodes, facilities_nodes, food_nodes, lot_nodes]
 
 descrips = [
     "Turn left. Walk right, walk until you see it",
@@ -179,32 +189,41 @@ connected_to_relations = [
 ]
 
 in_same_building_relations = [
-    Relationship(food_nodes["fc6"], "IN_SAME_BUILDING", building_nodes["t19"]),
-    Relationship(food_nodes["fc4"], "IN_SAME_BUILDING", facilities_nodes["aero"]),
-    Relationship(food_nodes["fc3"], "IN_SAME_BUILDING", facilities_nodes["polyc"]),
-    Relationship(food_nodes["fc2"], "IN_SAME_BUILDING", building_nodes["t1ac"]),
-    Relationship(food_nodes["libcafe"], "IN_SAME_BUILDING", facilities_nodes["colours"]),
-    Relationship(facilities_nodes["mlt8"], "IN_SAME_BUILDING", building_nodes["t19"]),
-    Relationship(facilities_nodes["mlt9"], "IN_SAME_BUILDING", building_nodes["t19"]),
-    Relationship(facilities_nodes["mlt10"], "IN_SAME_BUILDING", building_nodes["t19"]),
-    Relationship(facilities_nodes["mlt11"], "IN_SAME_BUILDING", building_nodes["t19"]),
-    Relationship(facilities_nodes["mlt12"], "IN_SAME_BUILDING", building_nodes["t21"]),
-    Relationship(facilities_nodes["spec"], "IN_SAME_BUILDING", building_nodes["t15"]), 
-    Relationship(facilities_nodes["mainlibex"], "IN_SAME_BUILDING", facilities_nodes["mainlib"])
+    Relationship(food_nodes["fc6"], "IN_SAME_BUILDING", building_nodes["t19"], distance = 0),
+    Relationship(food_nodes["fc4"], "IN_SAME_BUILDING", facilities_nodes["aero"], distance = 0),
+    Relationship(food_nodes["fc3"], "IN_SAME_BUILDING", facilities_nodes["polyc"], distance = 0),
+    Relationship(food_nodes["fc2"], "IN_SAME_BUILDING", building_nodes["t1ac"], distance = 0),
+    Relationship(food_nodes["libcafe"], "IN_SAME_BUILDING", facilities_nodes["colours"], distance = 0),
+    Relationship(facilities_nodes["mlt8"], "IN_SAME_BUILDING", building_nodes["t19"], distance = 0),
+    Relationship(facilities_nodes["mlt9"], "IN_SAME_BUILDING", building_nodes["t19"], distance = 0),
+    Relationship(facilities_nodes["mlt10"], "IN_SAME_BUILDING", building_nodes["t19"], distance = 0),
+    Relationship(facilities_nodes["mlt11"], "IN_SAME_BUILDING", building_nodes["t19"], distance = 0),
+    Relationship(facilities_nodes["mlt12"], "IN_SAME_BUILDING", building_nodes["t21"], distance = 0),
+    Relationship(facilities_nodes["spec"], "IN_SAME_BUILDING", building_nodes["t15"], distance = 0), 
+    Relationship(facilities_nodes["mainlibex"], "IN_SAME_BUILDING", facilities_nodes["mainlib"], distance = 0)
 ]
 
-near_relations = [
-    Relationship(parking_lot_nodes["a1"], "NEAR", facilities_nodes["moberly"]),
-    Relationship(parking_lot_nodes["a2"], "NEAR", facilities_nodes["tcourt"]),
-    Relationship(parking_lot_nodes["a3"], "NEAR", facilities_nodes["admin"]),
-    Relationship(parking_lot_nodes["b1"], "NEAR", building_nodes["w5a"]),
-    Relationship(parking_lot_nodes["b2"], "NEAR", building_nodes["w5a"]),
-    Relationship(parking_lot_nodes["b3"], "NEAR", building_nodes["w5"]),
-    Relationship(parking_lot_nodes["c1"], "NEAR", building_nodes["isc"]),
-    Relationship(parking_lot_nodes["c2"], "NEAR", building_nodes["w2"]),
-    Relationship(parking_lot_nodes["d1"], "NEAR", building_nodes["t11a"]),
-    Relationship(parking_lot_nodes["d2"], "NEAR", building_nodes["t12"]),
-    Relationship(parking_lot_nodes["d3"], "NEAR", building_nodes["t11b"])
+has_parking_lot_relations = [
+    Relationship(lot_nodes["a1"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a2"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a3"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a4"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a5"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a6"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a7"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a8"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a9"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a10"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a11"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a12"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a13"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a14"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a15"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a16"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a17"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a18"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a19"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0),
+    Relationship(lot_nodes["a20"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0)
 ]
 
-relation_nodes = [walk_relations, connected_to_relations, in_same_building_relations, near_relations]
+relation_nodes = [walk_relations, connected_to_relations, in_same_building_relations, has_parking_lot_relations]
