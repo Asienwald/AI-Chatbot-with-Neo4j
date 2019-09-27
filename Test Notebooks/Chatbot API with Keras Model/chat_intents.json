@@ -127,7 +127,7 @@
     },
     {
         "tag": "cca_list",
-        "patterns": ["what ccas are there", "what cca do you have", "do you have a specific cca or club", "what ccas", "what clubs",
+        "patterns": ["cca","what ccas are there", "what cca do you have", "do you have a specific cca or club", "what ccas", "what clubs",
                      "how many ccas are there"],
         "context": "cca"
     },

@@ -1,0 +1,104 @@
+<BoxLayout>:
+    # Label:
+    canvas.before:
+        Color:
+            rgba: 1,0,0,1
+        Rectangle:
+            pos: (self.center_x, self.y)
+            size: self.size
+<AnchorLayout>:
+    canvas.before:
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            pos: (self.x, self.y)
+            size: (root.width/2, 50)
+    anchor_x:"left"
+            
+WindowManager:
+    MainWindow:
+    SecondWindow:
+
+<MainWindow>:
+    name: "main"
+    gl:gl
+    view:view_layout
+    userInput: userInput
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+        canvas.before:
+            Color:
+                rgba: 0.5,0.5,0.5,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    
+        GridLayout: 
+            cols:1
+            size_hint: (1,None)
+            height: root.height/10
+            Button:
+                text:"Location"
+                on_release:
+                    app.root.current= "location"
+                    root.manager.transition.direction = "left"
+        ScrollView:
+            id: view_layout
+            size: self.size
+            GridLayout:
+                canvas.before:
+                    Color:
+                        rgba : 0.5,0.5,0.5,1
+                    Rectangle:
+                        pos: self.pos
+                        size : self.size
+                id: gl
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: "50dp"
+                row_force_default: True
+        GridLayout:
+            cols:2
+            canvas.before:
+                Color:
+                    rgba: 0.5,0.5,0.5,1
+                Rectangle:
+                    pos:self.pos
+                    size: self.size
+            size_hint:(1,0.1)
+            height: root.height/10
+            TextInput:
+                id:userInput
+                multiline:True
+            Button:
+                text:"submit"
+                on_release: root.btn()
+                size_hint:(0.5,1)
+        
+            
+
+
+<SecondWindow>:
+    name: "location"
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+        canvas.before:
+            Color:
+                rgba: 0.5,0.5,0.5,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    
+        GridLayout: 
+            cols:1
+            size_hint: (1,None)
+            height: root.height/10
+            Button:
+                text:"Chat"
+                on_release:
+                    app.root.current= "main"
+                    root.manager.transition.direction = "right"
