@@ -167,7 +167,8 @@ walk_relations = [
     Relationship(building_nodes["w2"], "WALK", building_nodes["w3"], description = descrips[3], distance = round(random.uniform(1.2, 25.6), 2)),
     Relationship(building_nodes["w1"], "WALK", building_nodes["w2"], description = descrips[0], distance = round(random.uniform(1.2, 25.6), 2)),
     Relationship(building_nodes["t1ac"], "WALK", building_nodes["t1"], description = descrips[1], distance = round(random.uniform(1.2, 25.6), 2)),
-    Relationship(building_nodes["isc"], "WALK", building_nodes["t1ac"], description = descrips[2], distance = round(random.uniform(1.2, 25.6), 2))
+    Relationship(building_nodes["isc"], "WALK", building_nodes["t1ac"], description = descrips[2], distance = round(random.uniform(1.2, 25.6), 2)),
+    Relationship(building_nodes["parking"], "WALK", building_nodes["t20"], description = descrips[2], distance = round(random.uniform(1.2, 25.6), 2))
 ]
 
 connected_to_relations = [
