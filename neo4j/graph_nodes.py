@@ -35,10 +35,10 @@ building_nodes = dict(
     w12 = Node("building", name = "W12", description = "muted yellow"),
     w13 = Node("building", name = "W13", description = "muted yellow"),
     w14 = Node("building", name = "W14", description = "muted yellow"),
-    t19 = Node("building", name = "T19", description = "blue", school = "SoC"),
-    t20 = Node("building", name = "T20", description = "blue", school = "SoC"),
-    t21 = Node("building", name = "T21", description = "blue", school = "SoC"),
-    t22 = Node("building", name = "T22", description = "blue", school = "SoC"),
+    t19 = Node("building", name = "T19", description = "This building is filled with classrooms.", school = "SoC"),
+    t20 = Node("building", name = "T20", description = "More classrooms.", school = "SoC"),
+    t21 = Node("building", name = "T21", description = "This building has a lot of tables for students to use when studying.", school = "SoC"),
+    t22 = Node("building", name = "T22", description = "This building is separated from the rest, but still filled with classrooms.", school = "SoC"),
     sob = Node("building", name = "SoB", description = "blue"),
     parking = Node("building", name = "Parking lot", description = "test")
 )
@@ -59,17 +59,17 @@ facilities_nodes = dict(
     eleven = Node("facility", name = "eleven²", type = "study", description = "brown"),
     mpf = Node("facility", name = "Multi Purpose Field", type = "sports", description = "purple"),
     mpc = Node("facility", name = "Multi Purpose Court", type = "sports", description = "purple"),
-    bcourt = Node("facility", name = "Basketball Courts", type = "sports", description = "purple"),
-    tcourt = Node("facility", name = "Tennis Courts", type = "sports", description = "purple"),
-    gym = Node("facility", name = "The Place", type = "sports", description = "purple"),
-    sc = Node("facility", name = "Swimming Complex", type = "sports", description = "purple"),
-    sa = Node("facility", name = "Sports Arena", type = "sports", description = "purple"),
+    bcourt = Node("facility", name = "Basketball Courts", type = "sports", description = "The basketball courts are often filled with people."),
+    tcourt = Node("facility", name = "Tennis Courts", type = "sports", description = "This is where students can play tennis."),
+    gym = Node("facility", name = "The Place", type = "sports", description = "This is a gym, although the name may not indicate so."),
+    sc = Node("facility", name = "Swimming Complex", type = "sports", description = "The pools are used for swimming SFL in the evenings."),
+    sa = Node("facility", name = "Sports Arena", type = "sports", description = "The sports arena is used for badminton SFL and as practice courts for sports clubs."),
     sac = Node("facility", name = "Student & Alumni Centre", type = "info", description = "purple"),
     polyc = Node("facility", name = "Poly Centre", type = "info", description = "purple"),
-    moberly = Node("facility", name = "Moberly", type = "study", description = "purple"),
-    mainlib = Node("facility", name = "Main Library", type = "library", description = "red"),
-    mainlibex = Node("facility", name = "Main Library Extension", type = "library", description = "red"),
-    admin = Node("facility", name = "Admin Building", type = "info", description = "red"), 
+    moberly = Node("facility", name = "Moberly", type = "study", description = "Contains club rooms for recreational/arts CCA."),
+    mainlib = Node("facility", name = "Main Library", type = "library", description = "This is a big library."),
+    mainlibex = Node("facility", name = "Main Library Extension", type = "library", description = "The extension has many useful facilities."),
+    admin = Node("facility", name = "Admin Building", type = "info", description = "Students can come to submit important documents like forms for EAE."), 
     sanc = Node("facility", name = "The Sanctuary", type = "study", description = "orange"),
     colours = Node("facility", name = "Colours", type = "study", description = "orange"),
     spav = Node("facility", name = "SPavillion", type = "study", description = "orange")
@@ -87,35 +87,42 @@ food_nodes = dict(
 )
 
 lot_nodes = dict(
-    a1 = Node("lots", name = "A-1", description = "this is lot number one"),
-    a2 = Node("lots", name = "A-2", description = ""),
-    a3 = Node("lots", name = "A-3", description = ""),
-    a4 = Node("lots", name = "A-4", description = ""),
-    a5 = Node("lots", name = "A-5", description = ""),
-    a6 = Node("lots", name = "A-6", description = ""),
-    a7 = Node("lots", name = "A-7", description = ""),
-    a8 = Node("lots", name = "A-8", description = ""),
-    a9 = Node("lots", name = "A-9", description = ""),
-    a10 = Node("lots", name = "A-10", description = ""),
-    a11 = Node("lots", name = "A-11", description = ""),
-    a12 = Node("lots", name = "A-12", description = ""),
-    a13 = Node("lots", name = "A-13", description = ""),
-    a14 = Node("lots", name = "A-14", description = ""),
-    a15 = Node("lots", name = "A-15", description = ""),
-    a16 = Node("lots", name = "A-16", description = ""),
-    a17 = Node("lots", name = "A-17", description = ""),
-    a18 = Node("lots", name = "A-18", description = ""),
-    a19 = Node("lots", name = "A-19", description = ""),
-    a20 = Node("lots", name = "A-20", description = "")
+    a1 = Node("lots", name = "A-1"),
+    a2 = Node("lots", name = "A-2"),
+    a3 = Node("lots", name = "A-3"),
+    a4 = Node("lots", name = "A-4"),
+    a5 = Node("lots", name = "A-5"),
+    a6 = Node("lots", name = "A-6"),
+    a7 = Node("lots", name = "A-7"),
+    a8 = Node("lots", name = "A-8"),
+    a9 = Node("lots", name = "A-9"),
+    a10 = Node("lots", name = "A-10"),
+    a11 = Node("lots", name = "A-11"),
+    a12 = Node("lots", name = "A-12"),
+    a13 = Node("lots", name = "A-13"),
+    a14 = Node("lots", name = "A-14"),
+    a15 = Node("lots", name = "A-15"),
+    a16 = Node("lots", name = "A-16"),
+    a17 = Node("lots", name = "A-17"),
+    a18 = Node("lots", name = "A-18"),
+    a19 = Node("lots", name = "A-19"),
+    a20 = Node("lots", name = "A-20")
 )
 
-graph_nodes= [building_nodes, facilities_nodes, food_nodes, lot_nodes]
+event_nodes = dict(
+    smartpoly = Node("event", name = "SmartPoly", description = "This is the smartpoly hackathon 2019.")
+)
+
+graph_nodes= [building_nodes, facilities_nodes, food_nodes, lot_nodes, event_nodes]
 
 descrips = [
     "Turn left. Walk right, walk until you see it",
     "Walk to the next nearest turn and turn a left then a right then keep walking straight",
     "Climb up to level 2 and access the building through the bridge",
-    "Walk along the classrooms and turn right before turning a left"
+    "Walk along the classrooms and turn right before turning a left",
+    "Walk to the intersection of the bridge and walk straight then turn right to the lifts",
+    "Turn right from the intersection of the bridge and walk to the end of the corridor",
+    "Go to the third floor and go across the bridge"
 ]
 
 
@@ -168,25 +175,25 @@ walk_relations = [
     Relationship(building_nodes["w1"], "WALK", building_nodes["w2"], description = descrips[0], distance = round(random.uniform(1.2, 25.6), 2)),
     Relationship(building_nodes["t1ac"], "WALK", building_nodes["t1"], description = descrips[1], distance = round(random.uniform(1.2, 25.6), 2)),
     Relationship(building_nodes["isc"], "WALK", building_nodes["t1ac"], description = descrips[2], distance = round(random.uniform(1.2, 25.6), 2)),
-    Relationship(building_nodes["parking"], "WALK", building_nodes["t20"], description = descrips[2], distance = round(random.uniform(1.2, 25.6), 2))
+    Relationship(building_nodes["parking"], "WALK", building_nodes["t19"], description = descrips[2], distance = round(random.uniform(1.2, 25.6), 2))
 ]
 
 connected_to_relations = [
-    Relationship(building_nodes["t19"], "CONNECTED_TO", building_nodes["t20"], distance = 0),
-    Relationship(building_nodes["t20"], "CONNECTED_TO", building_nodes["t21"], distance = 0),
-    Relationship(building_nodes["t19"], "CONNECTED_TO", building_nodes["t21"], distance = 0),
-    Relationship(building_nodes["t22"], "CONNECTED_TO", building_nodes["t21"], distance = 0),
-    Relationship(facilities_nodes["hilltop"], "CONNECTED_TO", building_nodes["t22"], distance = 0, description = "t19 -> hilltop: walk toward t22 and go to the 4th floor and walk to the end of the corridor, there should be a glass door to hilltop"),
-    Relationship(food_nodes["macs"], "CONNECTED_TO", facilities_nodes["spec"], distance = 0),
-    Relationship(building_nodes["t12"], "CONNECTED_TO", building_nodes["t12a"], distance = 0),
-    Relationship(facilities_nodes["eleven"], "CONNECTED_TO", building_nodes["t11a"], distance = 0),
-    Relationship(building_nodes["t11c"], "CONNECTED_TO", building_nodes["t11b"], distance = 0),
-    Relationship(facilities_nodes["sc"], "CONNECTED_TO", food_nodes["fc5"], distance = 0),
-    Relationship(facilities_nodes["gym"], "CONNECTED_TO", facilities_nodes["sc"], distance = 0),
-    Relationship(facilities_nodes["mpc"], "CONNECTED_TO", facilities_nodes["mpf"], distance = 0),
-    Relationship(facilities_nodes["bcourt"], "CONNECTED_TO", facilities_nodes["mpc"], distance = 0),
-    Relationship(building_nodes["t5"], "CONNECTED_TO", facilities_nodes["spav"], distance = 0),
-    Relationship(building_nodes["w5"], "CONNECTED_TO", building_nodes["w4"], distance = 0)
+    Relationship(building_nodes["t19"], "CONNECTED_TO", building_nodes["t20"], description = descrips[4], distance = 0),
+    Relationship(building_nodes["t20"], "CONNECTED_TO", building_nodes["t21"], description = descrips[5], distance = 0),
+    Relationship(building_nodes["t19"], "CONNECTED_TO", building_nodes["t21"], description = descrips[5], distance = 0),
+    Relationship(building_nodes["t22"], "CONNECTED_TO", building_nodes["t21"], description = descrips[4], distance = 0),
+    Relationship(facilities_nodes["hilltop"], "CONNECTED_TO", building_nodes["t22"], description = descrips[6], distance = 0),
+    Relationship(food_nodes["macs"], "CONNECTED_TO", facilities_nodes["spec"], description = descrips[6], distance = 0),
+    Relationship(building_nodes["t12"], "CONNECTED_TO", building_nodes["t12a"], description = descrips[4], distance = 0),
+    Relationship(facilities_nodes["eleven"], "CONNECTED_TO", building_nodes["t11a"], description = descrips[6], distance = 0),
+    Relationship(building_nodes["t11c"], "CONNECTED_TO", building_nodes["t11b"], description = descrips[5], distance = 0),
+    Relationship(facilities_nodes["sc"], "CONNECTED_TO", food_nodes["fc5"], description = descrips[4], distance = 0),
+    Relationship(facilities_nodes["gym"], "CONNECTED_TO", facilities_nodes["sc"], description = descrips[4], distance = 0),
+    Relationship(facilities_nodes["mpc"], "CONNECTED_TO", facilities_nodes["mpf"], description = descrips[6], distance = 0),
+    Relationship(facilities_nodes["bcourt"], "CONNECTED_TO", facilities_nodes["mpc"], description = descrips[6], distance = 0),
+    Relationship(building_nodes["t5"], "CONNECTED_TO", facilities_nodes["spav"], description = descrips[5], distance = 0),
+    Relationship(building_nodes["w5"], "CONNECTED_TO", building_nodes["w4"], description = descrips[4], distance = 0)
 ]
 
 in_same_building_relations = [
@@ -227,4 +234,8 @@ has_parking_lot_relations = [
     Relationship(lot_nodes["a20"], "HAS_PARKING_LOT", building_nodes["parking"], distance = 0)
 ]
 
-relation_nodes = [walk_relations, connected_to_relations, in_same_building_relations, has_parking_lot_relations]
+held_in_relations = [
+    Relationship(event_nodes["smartpoly"], "HELD_IN", building_nodes["t14"])
+]
+
+relation_nodes = [walk_relations, connected_to_relations, in_same_building_relations, has_parking_lot_relations, held_in_relations]
