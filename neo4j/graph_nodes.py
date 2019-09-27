@@ -40,7 +40,7 @@ building_nodes = dict(
     t21 = Node("building", name = "T21", description = "This building has a lot of tables for students to use when studying.", school = "SoC"),
     t22 = Node("building", name = "T22", description = "This building is separated from the rest, but still filled with classrooms.", school = "SoC"),
     sob = Node("building", name = "SoB", description = "blue"),
-    parking = Node("building", name = "Parking lot", description = "test")
+    parking = Node("building", name = "Parking Lot A", description = "This is a parking lot with a lot of lots")
 )
 
 facilities_nodes = dict(
@@ -110,7 +110,8 @@ lot_nodes = dict(
 )
 
 event_nodes = dict(
-    smartpoly = Node("event", name = "SmartPoly", description = "This is the smartpoly hackathon 2019.")
+    smartpoly = Node("event", name = "SmartPoly", description = "This is the smartpoly hackathon 2019."),
+    wss = Node("event", name = "WSS Training", description = "WSS Training for WSS 2020. Held from 9am to 3pm")
 )
 
 graph_nodes= [building_nodes, facilities_nodes, food_nodes, lot_nodes, event_nodes]
@@ -198,7 +199,7 @@ connected_to_relations = [
 ]
 
 in_same_building_relations = [
-    Relationship(food_nodes["fc6"], "IN_SAME_BUILDING", building_nodes["t19"], distance = 0),
+    Relationship(food_nodes["fc6"], "IN_SAME_BUILDING", building_nodes["t19"], distance = 0, description = "It is in same building."),
     Relationship(food_nodes["fc4"], "IN_SAME_BUILDING", facilities_nodes["aero"], distance = 0),
     Relationship(food_nodes["fc3"], "IN_SAME_BUILDING", facilities_nodes["polyc"], distance = 0),
     Relationship(food_nodes["fc2"], "IN_SAME_BUILDING", building_nodes["t1ac"], distance = 0),
@@ -236,7 +237,8 @@ has_parking_lot_relations = [
 ]
 
 held_in_relations = [
-    Relationship(event_nodes["smartpoly"], "HELD_IN", building_nodes["t14"])
+    Relationship(event_nodes["smartpoly"], "HELD_IN", building_nodes["t14"]),
+    Relationship(event_nodes['wss'], "HELD_IN", building_nodes['t21'])
 ]
 
 relation_nodes = [walk_relations, connected_to_relations, in_same_building_relations, has_parking_lot_relations, held_in_relations]
