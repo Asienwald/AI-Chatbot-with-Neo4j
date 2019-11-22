@@ -1,4 +1,8 @@
 # SmartPoly-AI-Chatbot
 
-We'll share our code here
-Please create your own directory if you're testing stuff to ensure it doesn't clash with other files
+Smartpoly Hackathon 2019
+
+Chatbot built with Python and Keras
+All datasets are built by us
+
+Neo4j graph database for a real-time visual representation of SP
