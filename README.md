@@ -1,6 +1,6 @@
 # SmartPoly-AI-Chatbot-With-Neo4j
 
-Submission for Smartpoly Hackathon 2019 built in less than 12 hours
+Submission for Smartpoly Hackathon 2019 built in less than 24 hours
 
 ## Contributions
 - [Kar Wei](https://github.com/Asienwald)
